@@ -716,7 +716,7 @@ a {
 
 .page-hero-green {
     background: linear-gradient(180deg, rgba(35, 38, 26, 0.78) 0%, rgba(70, 78, 42, 0.88) 100%),
-                url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+                url('https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     color: white
 }
 
@@ -734,7 +734,7 @@ a {
 
 .page-hero-cream {
     background: linear-gradient(rgba(255, 249, 239, 0.92), rgba(255, 249, 239, 0.94)),
-                url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat
+                url('https://images.unsplash.com/photo-1425934398893-310a009a77f9?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat
 }
 
 .search-bar {
