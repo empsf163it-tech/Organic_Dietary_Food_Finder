@@ -1,6 +1,136 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dietary Finder — FuDOrg</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css"></head><body>
-<header class="site-header"><a class="brand" href="index.html">FuDOrg<span>.</span></a><button class="menu-toggle" aria-label="Toggle navigation">☰</button><nav class="nav"><a href="index.html">Home</a><a href="explore.html">Explore Foods</a><a class="active" href="dietary-finder.html">Dietary Finder</a><a href="about.html">Our Story</a><a class="nav-cta" href="explore.html">Explore the garden ↗</a></nav></header>
-<main><section class="page-hero page-hero-cream"><span class="eyebrow">YOUR TABLE, YOUR WAY</span><h1>Find foods that<br><em>fit your flow.</em></h1><p>Choose what matters to you and explore ingredient ideas. This simple finder is a starting point, not a substitute for checking labels or professional advice.</p></section>
-<section class="finder-wrap section-wrap"><div class="finder-intro"><span class="eyebrow">LET'S GET PERSONAL</span><h2>What are you<br><em>looking for?</em></h2><p>Select one or more preferences to see matching sample ingredients.</p><div class="finder-decoration">✳<br><span>Good choices<br>start with knowing.</span></div></div><div class="finder-card"><form id="diet-form"><fieldset><legend>Choose your food preferences</legend><label class="check-option"><input type="checkbox" name="diet" value="plant"><span class="checkmark"></span><span><strong>Plant-based ideas</strong><small>Explore fruits, vegetables, grains and plant ingredients.</small></span></label><label class="check-option"><input type="checkbox" name="diet" value="fiber"><span class="checkmark"></span><span><strong>Fibre-focused foods</strong><small>Discover ingredients commonly known as sources of dietary fibre.</small></span></label><label class="check-option"><input type="checkbox" name="diet" value="protein"><span class="checkmark"></span><span><strong>Protein-containing foods</strong><small>Explore foods that can contribute protein to meals.</small></span></label><label class="check-option"><input type="checkbox" name="diet" value="glutenfree"><span class="checkmark"></span><span><strong>Gluten-free ingredient ideas</strong><small>Always verify labels and cross-contamination information.</small></span></label><label class="check-option"><input type="checkbox" name="diet" value="vegan"><span class="checkmark"></span><span><strong>Vegan ingredient ideas</strong><small>Ingredient suggestions only; verify all packaged products.</small></span></label></fieldset><button class="button button-dark button-full" type="submit">Find my ingredients ↗</button><button class="reset-link" type="reset">Clear preferences</button></form><div id="finder-results" class="finder-results" hidden aria-live="polite"></div></div></section><section class="disclaimer section-wrap"><span>✳</span><p><strong>A gentle reminder:</strong> Dietary needs can be personal. This demo uses sample tags and does not assess allergies, medical conditions or individual nutritional requirements. Please check packaging and consult a qualified professional when needed.</p></section></main>
-<footer class="site-footer"><div class="footer-top"><div><a class="brand footer-brand" href="index.html">FuDOrg<span>.</span></a><p>Find your kind of goodness.<br>Food discovery with its roots in nature.</p></div><div class="footer-links"><strong>Explore</strong><a href="explore.html">Food garden</a><a href="dietary-finder.html">Dietary finder</a><a href="about.html">Our story</a></div><div class="footer-links"><strong>Follow along</strong><a href="#">Instagram ↗</a><a href="#">Pinterest ↗</a><a href="#">Facebook ↗</a></div><a class="back-top" href="#top">Back to top ↑</a></div><div class="footer-bottom"><span>© <span class="year"></span> FuDOrg. Made with care.</span><span>Explore thoughtfully · Eat mindfully</span></div></footer><script src="assets/app.js"></script></body></html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dietary Finder — FuDOrg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header class="site-header"><a class="brand" href="index.html">FuDOrg<span>.</span></a><button class="menu-toggle"
+            aria-label="Toggle navigation">☰</button>
+        <nav class="nav"><a href="index.html">Home</a><a href="explore.html">Explore Foods</a><a class="active"
+                href="dietary-finder.html">Dietary Finder</a><a href="about.html">Our Story</a><a class="nav-cta"
+                href="explore.html">Explore the garden</a></nav>
+    </header>
+    <main>
+        <section class="page-hero page-hero-cream"><span class="eyebrow">YOUR TABLE, YOUR WAY</span>
+            <h1>Find foods that<br><em>fit your flow.</em></h1>
+            <p>Choose what matters to you and explore ingredient ideas. This simple finder is a starting point, not a
+                substitute for checking labels or professional advice.</p>
+        </section>
+        <section class="finder-wrap section-wrap">
+            <div class="finder-intro"><span class="eyebrow">LET'S GET PERSONAL</span>
+                <h2>What are you<br><em>looking for?</em></h2>
+                <p>Select one or more preferences to see matching sample ingredients.</p>
+                <div class="finder-visual-card">
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80" alt="Fresh organic nourish bowl" loading="lazy">
+                    <div class="finder-visual-caption">
+                        <span class="eyebrow">NOURISH YOUR BODY</span>
+                        <strong>Eat well, live vibrantly.</strong>
+                        <p>Simple whole ingredients chosen to match your personal lifestyle and wellbeing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="finder-card">
+                <form id="diet-form">
+                    <fieldset>
+                        <legend>Choose your food preferences</legend><label class="check-option"><input type="checkbox"
+                                name="diet" value="plant"><span class="checkmark"></span><span><strong>Plant-based
+                                    ideas</strong><small>Explore fruits, vegetables, grains and plant
+                                    ingredients.</small></span></label><label class="check-option"><input
+                                type="checkbox" name="diet" value="fiber"><span
+                                class="checkmark"></span><span><strong>Fibre-focused foods</strong><small>Discover
+                                    ingredients commonly known as sources of dietary fibre.</small></span></label><label
+                            class="check-option"><input type="checkbox" name="diet" value="protein"><span
+                                class="checkmark"></span><span><strong>Protein-containing foods</strong><small>Explore
+                                    foods that can contribute protein to meals.</small></span></label><label
+                            class="check-option"><input type="checkbox" name="diet" value="glutenfree"><span
+                                class="checkmark"></span><span><strong>Gluten-free ingredient
+                                    ideas</strong><small>Always verify labels and cross-contamination
+                                    information.</small></span></label><label class="check-option"><input
+                                type="checkbox" name="diet" value="vegan"><span
+                                class="checkmark"></span><span><strong>Vegan ingredient ideas</strong><small>Ingredient
+                                    suggestions only; verify all packaged products.</small></span></label>
+                    </fieldset><button class="button button-dark button-full" type="submit">Find my ingredients</button><button class="reset-link" type="reset">Clear preferences</button>
+                </form>
+                <div id="finder-results" class="finder-results" hidden aria-live="polite"></div>
+            </div>
+        </section>
+        <section class="pathways-section section-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">EXPLORE BY LIFESTYLE</span>
+                    <h2>Everyday <em>pathways</em></h2>
+                </div>
+                <p>Simple ways to incorporate more fresh, organic nutrition into your daily rhythm.</p>
+            </div>
+            <div class="pathways-grid">
+                <article class="pathway-card">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Fresh organic plant greens" loading="lazy">
+                    <div class="pathway-card-body">
+                        <span class="eyebrow">PLANT-POWERED</span>
+                        <h3>Greens & garden finds</h3>
+                        <p>Vibrant leafy greens, root vegetables and crisp produce straight from organic soil.</p>
+                    </div>
+                </article>
+                <article class="pathway-card">
+                    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80" alt="Wholesome ancient grains" loading="lazy">
+                    <div class="pathway-card-body">
+                        <span class="eyebrow">SUSTAINED ENERGY</span>
+                        <h3>Ancient grains & pulses</h3>
+                        <p>Protein-rich lentils, oats and seeds that anchor wholesome meals with natural stamina.</p>
+                    </div>
+                </article>
+                <article class="pathway-card">
+                    <img src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=600&q=80" alt="Organic fresh berries" loading="lazy">
+                    <div class="pathway-card-body">
+                        <span class="eyebrow">ANTIOXIDANT RICH</span>
+                        <h3>Sun-ripened berries</h3>
+                        <p>Fresh orchard fruit and sweet berries packed with natural goodness and flavour.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="disclaimer section-wrap"><span>✳</span>
+            <p><strong>A gentle reminder:</strong> Dietary needs can be personal. This demo uses sample tags and does
+                not assess allergies, medical conditions or individual nutritional requirements. Please check packaging
+                and consult a qualified professional when needed.</p>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div><a class="brand footer-brand" href="index.html">FuDOrg<span>.</span></a>
+                <p>Find your kind of goodness.<br>Food discovery with its roots in nature.</p>
+            </div>
+            <div class="footer-links"><strong>Explore</strong><a href="explore.html">Food garden</a><a
+                    href="dietary-finder.html">Dietary finder</a><a href="about.html">Our story</a></div>
+            <div class="footer-links">
+                <strong>Follow along</strong>
+                <a href="#" class="social-link" aria-label="Instagram">
+                    <svg class="social-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="social-link" aria-label="Pinterest">
+                    <svg class="social-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.69 0 1.026-.653 2.56-1.002 3.982-.283 1.194.599 2.164 1.777 2.164 2.133 0 3.77-2.249 3.77-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.627 0 11.983-5.367 11.983-11.987C24 5.367 18.644 0 12.017 0z"/></svg>
+                    <span>Pinterest</span>
+                </a>
+                <a href="#" class="social-link" aria-label="Facebook">
+                    <svg class="social-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <span>Facebook</span>
+                </a>
+            </div><a class="back-top" href="#top">Back to top ↑</a>
+        </div>
+        <div class="footer-bottom"><span>© <span class="year"></span> FuDOrg. Made with care.</span><span>Explore
+                thoughtfully · Eat mindfully</span></div>
+    </footer>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>

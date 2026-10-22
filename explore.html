@@ -1,8 +1,117 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Explore Foods — FuDOrg</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css"></head><body>
-<header class="site-header"><a class="brand" href="index.html">FuDOrg<span>.</span></a><button class="menu-toggle" aria-label="Toggle navigation">☰</button><nav class="nav"><a href="index.html">Home</a><a class="active" href="explore.html">Explore Foods</a><a href="dietary-finder.html">Dietary Finder</a><a href="about.html">Our Story</a><a class="nav-cta" href="dietary-finder.html">Find your fit ↗</a></nav></header>
-<main><section class="page-hero page-hero-green"><span class="eyebrow">THE FOOD GARDEN</span><h1>Follow your <em>curiosity.</em></h1><p>Meet ingredients, learn their stories, and find something new to bring to your table.</p><div class="search-bar"><span>⌕</span><input id="food-search" type="search" placeholder="Search ingredients, e.g. spinach or oats"><button id="clear-search" type="button">Clear</button></div></section>
-<section class="explore-layout section-wrap"><aside class="filter-panel"><span class="eyebrow">BROWSE BY</span><h3>Food families</h3><div id="category-filters" class="category-filters"><button class="filter-chip selected" data-category="All">All ingredients <span>↗</span></button><button class="filter-chip" data-category="Fruits">Fruits</button><button class="filter-chip" data-category="Vegetables">Vegetables</button><button class="filter-chip" data-category="Grains">Grains & legumes</button><button class="filter-chip" data-category="Nuts & seeds">Nuts & seeds</button><button class="filter-chip" data-category="Herbs">Herbs</button></div><div class="filter-note"><span>✳</span><p>Ingredient information is for general discovery. Always check product labels for allergens and dietary suitability.</p></div></aside><div class="ingredient-area"><div class="results-head"><p id="results-count">A handful of good things</p><select id="sort-foods" aria-label="Sort ingredients"><option value="az">Name A–Z</option><option value="za">Name Z–A</option></select></div><div class="ingredient-grid" id="ingredient-grid"></div><div class="empty-state" id="empty-state" hidden>No ingredients match that search. Try another word or category.</div></div></section>
-<section class="quote-band"><p>“The more you know your food, the more ways you find to enjoy it.”</p><span>— THE FuDOrg APPROACH</span></section></main>
-<div class="modal-backdrop" id="ingredient-modal" hidden><section class="ingredient-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" aria-label="Close ingredient details">×</button><img id="modal-image" alt=""><div class="modal-content"><span class="eyebrow" id="modal-category"></span><h2 id="modal-title"></h2><p id="modal-description"></p><div class="modal-facts"><div><small>FOOD FAMILY</small><strong id="modal-family"></strong></div><div><small>COMMON USE</small><strong id="modal-use"></strong></div></div><p class="modal-disclaimer">Descriptions are general educational information, not medical advice. Verify nutritional values and allergens from reliable product-specific sources.</p></div></section></div>
-<footer class="site-footer"><div class="footer-top"><div><a class="brand footer-brand" href="index.html">FuDOrg<span>.</span></a><p>Find your kind of goodness.<br>Food discovery with its roots in nature.</p></div><div class="footer-links"><strong>Explore</strong><a href="explore.html">Food garden</a><a href="dietary-finder.html">Dietary finder</a><a href="about.html">Our story</a></div><div class="footer-links"><strong>Follow along</strong><a href="#">Instagram ↗</a><a href="#">Pinterest ↗</a><a href="#">Facebook ↗</a></div><a class="back-top" href="#top">Back to top ↑</a></div><div class="footer-bottom"><span>© <span class="year"></span> FuDOrg. Made with care.</span><span>Explore thoughtfully · Eat mindfully</span></div></footer><script src="assets/app.js"></script></body></html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore Foods — FuDOrg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header class="site-header"><a class="brand" href="index.html">FuDOrg<span>.</span></a><button class="menu-toggle"
+            aria-label="Toggle navigation">☰</button>
+        <nav class="nav"><a href="index.html">Home</a><a class="active" href="explore.html">Explore Foods</a><a
+                href="dietary-finder.html">Dietary Finder</a><a href="about.html">Our Story</a><a class="nav-cta"
+                href="dietary-finder.html">Explore the garden</a></nav>
+    </header>
+    <main>
+        <section class="page-hero page-hero-green"><span class="eyebrow">THE FOOD GARDEN</span>
+            <h1>Follow your <em>curiosity.</em></h1>
+            <p>Meet ingredients, learn their stories, and find something new to bring to your table.</p>
+            <div class="search-bar"><span>⌕</span><input id="food-search" type="search"
+                    placeholder="Search ingredients, e.g. spinach or oats"><button id="clear-search"
+                    type="button">Clear</button></div>
+        </section>
+        <section class="explore-layout section-wrap">
+            <aside class="filter-panel">
+                <div class="filter-panel-header">
+                    <span class="eyebrow">BROWSE BY</span>
+                    <h3>Food families</h3>
+                </div>
+                <div id="category-filters" class="category-filters">
+                    <button class="filter-chip selected" data-category="All">All ingredients</button>
+                    <button class="filter-chip" data-category="Fruits">Fruits</button>
+                    <button class="filter-chip" data-category="Vegetables">Vegetables</button>
+                    <button class="filter-chip" data-category="Grains">Grains & legumes</button>
+                    <button class="filter-chip" data-category="Nuts & seeds">Nuts & seeds</button>
+                    <button class="filter-chip" data-category="Herbs">Herbs</button>
+                </div>
+                <div class="filter-note"><span>✳</span>
+                    <p>Ingredient information is for general discovery. Always check product labels for allergens and
+                        dietary suitability.</p>
+                </div>
+                <div class="sidebar-spotlight">
+                    <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=500&q=80" alt="Fresh organic harvest" loading="lazy">
+                    <div class="spotlight-content">
+                        <strong>From Soil to Table</strong>
+                        <p>Clean, whole food ingredients cultivated with care for the earth.</p>
+                    </div>
+                </div>
+            </aside>
+            <div class="ingredient-area">
+                <div class="results-head">
+                    <p id="results-count">A handful of good things</p><select id="sort-foods"
+                        aria-label="Sort ingredients">
+                        <option value="az">Name A–Z</option>
+                        <option value="za">Name Z–A</option>
+                    </select>
+                </div>
+                <div class="ingredient-grid" id="ingredient-grid"></div>
+                <div class="empty-state" id="empty-state" hidden>No ingredients match that search. Try another word or
+                    category.</div>
+            </div>
+        </section>
+        <section class="quote-band">
+            <p>“The more you know your food, the more ways you find to enjoy it.”</p><span>— THE FuDOrg APPROACH</span>
+        </section>
+    </main>
+    <div class="modal-backdrop" id="ingredient-modal" hidden>
+        <section class="ingredient-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button
+                class="modal-close" aria-label="Close ingredient details">×</button><img id="modal-image" alt="">
+            <div class="modal-content"><span class="eyebrow" id="modal-category"></span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <div class="modal-facts">
+                    <div><small>FOOD FAMILY</small><strong id="modal-family"></strong></div>
+                    <div><small>COMMON USE</small><strong id="modal-use"></strong></div>
+                </div>
+                <p class="modal-disclaimer">Descriptions are general educational information, not medical advice. Verify
+                    nutritional values and allergens from reliable product-specific sources.</p>
+            </div>
+        </section>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div><a class="brand footer-brand" href="index.html">FuDOrg<span>.</span></a>
+                <p>Find your kind of goodness.<br>Food discovery with its roots in nature.</p>
+            </div>
+            <div class="footer-links"><strong>Explore</strong><a href="explore.html">Food garden</a><a
+                    href="dietary-finder.html">Dietary finder</a><a href="about.html">Our story</a></div>
+            <div class="footer-links">
+                <strong>Follow along</strong>
+                <a href="#" class="social-link" aria-label="Instagram">
+                    <svg class="social-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="social-link" aria-label="Pinterest">
+                    <svg class="social-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.69 0 1.026-.653 2.56-1.002 3.982-.283 1.194.599 2.164 1.777 2.164 2.133 0 3.77-2.249 3.77-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.627 0 11.983-5.367 11.983-11.987C24 5.367 18.644 0 12.017 0z"/></svg>
+                    <span>Pinterest</span>
+                </a>
+                <a href="#" class="social-link" aria-label="Facebook">
+                    <svg class="social-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <span>Facebook</span>
+                </a>
+            </div><a class="back-top" href="#top">Back to top ↑</a>
+        </div>
+        <div class="footer-bottom"><span>© <span class="year"></span> FuDOrg. Made with care.</span><span>Explore
+                thoughtfully · Eat mindfully</span></div>
+    </footer>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
